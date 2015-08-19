@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/element.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../prettify.css">
+    <link rel="stylesheet" href="../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header medium">
+    <h1>Code coverage report for <span class="entity">src/element.js</span></h1>
+    <h2>
+        Statements: <span class="metric">74.36% <small>(58 / 78)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">56.76% <small>(21 / 37)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">85.71% <small>(12 / 14)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">74.36% <small>(58 / 78)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../index.html">All files</a> &#187; <a href="index.html">src/</a> &#187; element.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126</td><td class="line-coverage"><span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">77</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">77</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">20</span>
+<span class="cline-any cline-yes">20</span>
+<span class="cline-any cline-yes">20</span>
+<span class="cline-any cline-yes">11</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">20</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">39</span>
+<span class="cline-any cline-yes">39</span>
+<span class="cline-any cline-yes">39</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">45</span>
+<span class="cline-any cline-yes">45</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">45</span>
+<span class="cline-any cline-yes">27</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">45</span>
+<span class="cline-any cline-yes">18</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">27</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">57</span>
+<span class="cline-any cline-yes">57</span>
+<span class="cline-any cline-yes">57</span>
+<span class="cline-any cline-yes">121</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">57</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">18</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">module.exports = function(p5) {
+    p5.prototype.querySVG = function(selector) {
+        var svg = this._graphics &amp;&amp; this._graphics.svg;
+        <span class="missing-if-branch" title="if path not taken" >I</span>if (!svg) {
+<span class="cstat-no" title="statement not covered" >            return null;</span>
+        }
+        return p5.SVGElement.prototype.query.call({elt: svg}, selector);
+    };
+&nbsp;
+    function SVGElement(element, pInst) {
+        <span class="missing-if-branch" title="if path not taken" >I</span>if (!element) {
+<span class="cstat-no" title="statement not covered" >            return null;</span>
+        }
+        return p5.Element.apply(this, arguments);
+    };
+&nbsp;
+    SVGElement.prototype = Object.create(p5.Element.prototype);
+&nbsp;
+    SVGElement.prototype.query = function(selector) {
+        var elements = this.elt.querySelectorAll(selector);
+        var objects = [];
+        for (var i = 0; i &lt; elements.length; i++) {
+            objects[i] = new SVGElement(elements[i]);
+        }
+        return objects;
+    };
+&nbsp;
+    SVGElement.prototype.append = function(element) {
+        var elt = element.elt || <span class="branch-1 cbranch-no" title="branch not covered" >element;</span>
+        this.elt.appendChild(elt);
+        return this;
+    };
+&nbsp;
+    SVGElement.prototype.attribute = function() {
+        var args = arguments;
+        <span class="missing-if-branch" title="if path not taken" >I</span>if (args.length === 3) {
+<span class="cstat-no" title="statement not covered" >            this.elt.setAttributeNS.apply(this.elt, args);</span>
+        }
+        if (args.length === 2) {
+            this.elt.setAttribute.apply(this.elt, args);
+        }
+        if (args.length === 1) {
+            return this.elt.getAttribute.apply(this.elt, args);
+        }
+        return this;
+    };
+&nbsp;
+    SVGElement.prototype.filter = function(filter, arg) {
+        p5.SVGFilters.apply(this, filter, arg);
+        return this;
+    };
+&nbsp;
+    SVGElement.prototype.unfilter = <span class="fstat-no" title="function not covered" >function(filterName, arg) {</span>
+<span class="cstat-no" title="statement not covered" >        var filters = this.attribute('data-p5-svg-filters') || '[]';</span>
+<span class="cstat-no" title="statement not covered" >        filters = JSON.parse(filters);</span>
+<span class="cstat-no" title="statement not covered" >        var found = false;</span>
+<span class="cstat-no" title="statement not covered" >        filters = filters.reverse().filter(<span class="fstat-no" title="function not covered" >function(filter) {</span></span>
+<span class="cstat-no" title="statement not covered" >            if ((filter[0] === filterName) &amp;&amp; (filter[1] === arg) &amp;&amp; !found) {</span>
+<span class="cstat-no" title="statement not covered" >                found = true;</span>
+<span class="cstat-no" title="statement not covered" >                return false;</span>
+            }
+<span class="cstat-no" title="statement not covered" >            return true;</span>
+        }).reverse();
+<span class="cstat-no" title="statement not covered" >        this.attribute('data-p5-svg-filters', JSON.stringify(filters));</span>
+<span class="cstat-no" title="statement not covered" >        p5.SVGFilters.apply(this, null);</span>
+<span class="cstat-no" title="statement not covered" >        return this;</span>
+    };
+&nbsp;
+    SVGElement.create = function(nodeName, attributes) {
+        attributes = attributes || {};
+        var elt = document.createElementNS("http://www.w3.org/2000/svg", nodeName);
+        Object.keys(attributes).forEach(function(k) {
+            elt.setAttribute(k, attributes[k]);
+        });
+        return new SVGElement(elt);
+    };
+&nbsp;
+    // matches polyfill from MDN
+    // https://developer.mozilla.org/en-US/docs/Web/API/Element/matches
+    SVGElement.prototype.matches = function(selector) {
+        var element = this.elt;
+        var matches = (element.document || element.ownerDocument).querySelectorAll(selector);
+        var i = 0;
+        while (matches[i] &amp;&amp; matches[i] !== element) {
+<span class="cstat-no" title="statement not covered" >            i++;</span>
+        }
+        return matches[i] ? true : <span class="branch-1 cbranch-no" title="branch not covered" >false;</span>
+    };
+&nbsp;
+    /**
+     * Get defs element, or create one if not exists
+     *
+     * @private
+     */
+    SVGElement.prototype._getDefs = function() {
+        var svg = this.parentNode('svg');
+        var defs = svg.query('defs');
+        <span class="missing-if-branch" title="else path not taken" >E</span>if (defs[0]) {
+            defs = defs[0];
+        } else {
+<span class="cstat-no" title="statement not covered" >            defs = SVGElement.create('defs');</span>
+<span class="cstat-no" title="statement not covered" >            svg.append(defs);</span>
+        }
+        return defs;
+    };
+&nbsp;
+    SVGElement.prototype.parentNode = function(selector) {
+        if (!selector) {
+            return new SVGElement(this.elt.parentNode);
+        }
+        var elt = this;
+        while (true) {
+            elt = this.parentNode();
+            <span class="missing-if-branch" title="else path not taken" >E</span>if (elt.matches(selector)) {
+                return elt;
+            }
+<span class="cstat-no" title="statement not covered" >            if (!elt) { // already top layer</span>
+<span class="cstat-no" title="statement not covered" >                break;</span>
+            }
+        }
+<span class="cstat-no" title="statement not covered" >        return null;</span>
+    };
+&nbsp;
+    p5.SVGElement = SVGElement;
+};
+&nbsp;</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Aug 19 2015 16:25:46 GMT+0800 (CST)</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

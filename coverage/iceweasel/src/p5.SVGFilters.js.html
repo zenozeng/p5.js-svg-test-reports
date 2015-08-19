@@ -1,0 +1,759 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/p5.SVGFilters.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../prettify.css">
+    <link rel="stylesheet" href="../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header high">
+    <h1>Code coverage report for <span class="entity">src/p5.SVGFilters.js</span></h1>
+    <h2>
+        Statements: <span class="metric">95.51% <small>(85 / 89)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">70% <small>(14 / 20)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">95.65% <small>(22 / 23)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">95.51% <small>(85 / 89)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../index.html">All files</a> &#187; <a href="index.html">src/</a> &#187; p5.SVGFilters.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239</td><td class="line-coverage"><span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-yes">24</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-yes">9</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">256</span>
+<span class="cline-any cline-yes">256</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">256</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">module.exports = function(p5) {
+    var SVGFilters = <span class="fstat-no" title="function not covered" >function() {</span>};
+&nbsp;
+    var SVGElement = p5.SVGElement;
+&nbsp;
+    var generateID = function() {
+        return Date.now().toString() + Math.random().toString().replace(/0\./, '');
+    };
+&nbsp;
+    // We have to build a filter for each element
+    // the `filter: f1 f2` and svg param is not supported by many browsers
+    // so we can just modify the filter def to do so
+    SVGFilters.apply = function(svgElement, func, arg) {
+        // get filters
+        var filters = svgElement.attribute('data-p5-svg-filters') || '[]';
+        filters = JSON.parse(filters);
+        <span class="missing-if-branch" title="else path not taken" >E</span>if (func) {
+            filters.push([func, arg]);
+        }
+        svgElement.attribute('data-p5-svg-filters', JSON.stringify(filters));
+&nbsp;
+        <span class="missing-if-branch" title="if path not taken" >I</span>if (filters.length === 0) {
+<span class="cstat-no" title="statement not covered" >            svgElement.attribute('filter', null);</span>
+<span class="cstat-no" title="statement not covered" >            return;</span>
+        }
+&nbsp;
+        // generate filters chain
+        filters = filters.map(function(filter, index) {
+            var inGraphics = index === 0 ? 'SourceGraphic' : (<span class="branch-1 cbranch-no" title="branch not covered" >'result-' + (index - 1))</span>;
+            var resultGraphics = 'result-' + index;
+            return SVGFilters[filter[0]].call(null, inGraphics, resultGraphics, filter[1]);
+        });
+&nbsp;
+        // get filter id for this element or create one
+        var filterid = svgElement.attribute('data-p5-svg-filter-id');
+        <span class="missing-if-branch" title="else path not taken" >E</span>if (!filterid) {
+            filterid = 'p5-svg-' + generateID();
+            svgElement.attribute('data-p5-svg-filter-id', filterid);
+            svgElement.attribute('filter', 'url(#' + filterid + ')');
+        }
+&nbsp;
+        // create &lt;filter&gt;
+        var filter = SVGElement.create('filter', {id: filterid});
+        filters.forEach(function(elt) {
+            if (!Array.isArray(elt)) {
+                elt = [elt];
+            }
+            elt.forEach(function(elt) {
+                filter.append(elt);
+            });
+        });
+&nbsp;
+        // get defs
+        var defs = svgElement._getDefs();
+        var oldfilter = defs.query('#' + filterid)[0];
+        <span class="missing-if-branch" title="else path not taken" >E</span>if (!oldfilter) {
+            defs.append(filter);
+        } else {
+<span class="cstat-no" title="statement not covered" >            oldfilter.elt.parentNode.replaceChild(filter.elt, oldfilter.elt);</span>
+        }
+    };
+&nbsp;
+    SVGFilters.blur = function(inGraphics, resultGraphics, val) {
+        return SVGElement.create('feGaussianBlur', {
+            stdDeviation: val,
+            in: inGraphics,
+            result: resultGraphics,
+            "color-interpolation-filters": "sRGB"
+        });
+    };
+&nbsp;
+    // See also: http://www.w3.org/TR/SVG11/filters.html#feColorMatrixElement
+    // See also: http://stackoverflow.com/questions/21977929/match-colors-in-fecolormatrix-filter
+    SVGFilters.colorMatrix = function(inGraphics, resultGraphics, matrix) {
+        return SVGElement.create('feColorMatrix', {
+            type: "matrix",
+            values: matrix.join(' '),
+            "color-interpolation-filters": "sRGB",
+            in: inGraphics,
+            result: resultGraphics
+        });
+    };
+&nbsp;
+    // Here we use CIE luminance for RGB
+    SVGFilters.gray = function(inGraphics, resultGraphics, val) {
+        var matrix = [
+            0.2126, 0.7152, 0.0722, 0, 0, // R'
+            0.2126, 0.7152, 0.0722, 0, 0, // G'
+            0.2126, 0.7152, 0.0722, 0, 0, // B'
+            0, 0, 0, 1, 0 // A'
+        ];
+        return SVGFilters.colorMatrix(inGraphics, resultGraphics, matrix);
+    };
+&nbsp;
+    SVGFilters.threshold = function(inGraphics, resultGraphics, val) {
+        var elements = [];
+        elements.push(SVGFilters.gray(inGraphics, resultGraphics + "-tmp"));
+        var componentTransfer = SVGElement.create('feComponentTransfer', {
+            "in": resultGraphics + "-tmp",
+            result: resultGraphics
+        });
+        var thresh = Math.floor(val * 255);
+        ["R", "G", "B"].forEach(function(channel) {
+            // Note that original value is from 0 to 1
+            var func = SVGElement.create('feFunc' + channel, {
+                type: "linear",
+                slope: 255, // all non-zero * 255
+                intercept: (thresh - 1) * -1
+            });
+            componentTransfer.append(func);
+        });
+        elements.push(componentTransfer);
+        return elements;
+    };
+&nbsp;
+    SVGFilters.invert = function(inGraphics, resultGraphics) {
+        var matrix = [
+            -1, 0, 0, 0, 1,
+            0, -1, 0, 0, 1,
+            0, 0, -1, 0, 1,
+            0, 0, 0, 1, 0
+        ];
+        return SVGFilters.colorMatrix(inGraphics, resultGraphics, matrix);
+    };
+&nbsp;
+    SVGFilters.opaque = function(inGraphics, resultGraphics) {
+        var matrix = [
+            1, 0, 0, 0, 0, // original R
+            0, 1, 0, 0, 0, // original G
+            0, 0, 1, 0, 0, // original B
+            0, 0, 0, 0, 1 // set A to 1
+        ];
+        return SVGFilters.colorMatrix(inGraphics, resultGraphics, matrix);
+    };
+&nbsp;
+    /**
+     * Generate discrete table values based on the given color map function
+     *
+     * @private
+     * @param {Function} fn - Function to map channel values (val ∈ [0, 255])
+     * @see http://www.w3.org/TR/SVG/filters.html#feComponentTransferElement
+     */
+    SVGFilters._discreteTableValues = function(fn) {
+        var table = [];
+        for (var val = 0; val &lt; 256; val++) {
+            var newval = fn(val);
+            table.push(newval / 255); // map to ∈ [0, 1]
+        }
+        return table;
+    };
+&nbsp;
+    /**
+     * Limits each channel of the image to the number of colors specified as
+     * the parameter. The parameter can be set to values between 2 and 255, but
+     * results are most noticeable in the lower ranges.
+     *
+     * Adapted from p5's Filters.posterize
+     */
+    SVGFilters.posterize = function(inGraphics, resultGraphics, level) {
+        level = parseInt(level, 10);
+        <span class="missing-if-branch" title="if path not taken" >I</span>if ((level &lt; 2) || (level &gt; 255)) {
+<span class="cstat-no" title="statement not covered" >            throw new Error(</span>
+                'Level must be greater than 2 and less than 255 for posterize'
+            );
+        }
+&nbsp;
+        var tableValues = SVGFilters._discreteTableValues(function(val) {
+            return (((val * level) &gt;&gt; 8) * 255) / (level - 1);
+        });
+&nbsp;
+        var componentTransfer = SVGElement.create('feComponentTransfer', {
+            "in": inGraphics,
+            result: resultGraphics,
+            "color-interpolation-filters": "sRGB"
+        });
+        ["R", "G", "B"].forEach(function(channel) {
+            var func = SVGElement.create('feFunc' + channel, {
+                type: "discrete",
+                tableValues: tableValues.join(' ')
+            });
+            componentTransfer.append(func);
+        });
+&nbsp;
+        return componentTransfer;
+    };
+&nbsp;
+    SVGFilters._blendOffset = function(inGraphics, resultGraphics, mode) {
+        var elements = [];
+        [
+            ["left", -1, 0],
+            ["right", 1, 0],
+            ["up", 0, -1],
+            ["down", 0, 1]
+        ].forEach(function(neighbor) {
+            elements.push(SVGElement.create('feOffset', {
+                "in": inGraphics,
+                result: resultGraphics + "-" + neighbor[0],
+                dx: neighbor[1],
+                dy: neighbor[2]
+            }));
+        });
+        [
+            [null, inGraphics],
+            [resultGraphics + "-left", resultGraphics + "-tmp-0"],
+            [resultGraphics + "-right", resultGraphics + "-tmp-1"],
+            [resultGraphics + "-up", resultGraphics + "-tmp-2"],
+            [resultGraphics + "-down", resultGraphics + "-tmp-3"]
+        ].forEach(function(layer, i, layers) {
+            if (i === 0) {
+                return;
+            }
+            elements.push(SVGElement.create('feBlend', {
+                "in": layers[i - 1][1],
+                in2: layer[0],
+                result: layer[1],
+                mode: mode
+            }));
+        });
+        return elements;
+    };
+&nbsp;
+    /**
+     * Increases the bright areas in an image
+     *
+     * Will create 4 offset layer and blend them using darken mode
+     */
+    SVGFilters.erode = function(inGraphics, resultGraphics) {
+        return SVGFilters._blendOffset(inGraphics, resultGraphics, 'darken');
+    };
+&nbsp;
+    SVGFilters.dilate = function(inGraphics, resultGraphics) {
+        return SVGFilters._blendOffset(inGraphics, resultGraphics, 'lighten');
+    };
+&nbsp;
+    p5.SVGFilters = SVGFilters;
+&nbsp;
+    return SVGFilters;
+};
+&nbsp;</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Aug 19 2015 16:25:46 GMT+0800 (CST)</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

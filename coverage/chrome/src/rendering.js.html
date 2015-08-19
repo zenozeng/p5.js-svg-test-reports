@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/rendering.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../prettify.css">
+    <link rel="stylesheet" href="../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header high">
+    <h1>Code coverage report for <span class="entity">src/rendering.js</span></h1>
+    <h2>
+        Statements: <span class="metric">100% <small>(37 / 37)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">100% <small>(6 / 6)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">100% <small>(5 / 5)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">100% <small>(37 / 37)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../index.html">All files</a> &#187; <a href="index.html">src/</a> &#187; rendering.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96</td><td class="line-coverage"><span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">42</span>
+<span class="cline-any cline-yes">42</span>
+<span class="cline-any cline-yes">18</span>
+<span class="cline-any cline-yes">18</span>
+<span class="cline-any cline-yes">18</span>
+<span class="cline-any cline-yes">18</span>
+<span class="cline-any cline-yes">18</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">42</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">var constants = require('./constants');
+var SVGCanvas = require('svgcanvas');
+&nbsp;
+module.exports = function(p5) {
+    // patch p5.Graphics for SVG
+    var _graphics = p5.Graphics;
+    p5.Graphics = function(w, h, renderer, pInst) {
+        var args = arguments;
+        _graphics.apply(this, args);
+        if (renderer === constants.SVG) {
+            // replace &lt;canvas&gt; with &lt;svg&gt;
+            var c = this._graphics.elt;
+            this._graphics = new p5.RendererSVG(c, pInst, false); // replace renderer
+            c = this._graphics.elt;
+            this.elt = c; // replace this.elt
+            // do default again
+            this._graphics.resize(w, h);
+            this._graphics._applyDefaults();
+        }
+        return this;
+    };
+    p5.Graphics.prototype = _graphics.prototype;
+&nbsp;
+    /**
+     * Due to a known issue (image is not surely ready before onload fires),
+     * we have no way to draw SVG element synchronously.
+     * So, this method will load a SVG Graphics
+     * and then convert it to Canvas Graphics asynchronously
+     *
+     * @see https://github.com/zenozeng/p5.js-svg/issues/78
+     *
+     * @method loadGraphics
+     * @param {p5.Graphics} graphics the p5.Grphaics object
+     * @param {Function(p5.Graphics)} [successCallback] Function to be called once
+     *                                 the SVG Graphics is loaded. Will be passed the
+     *                                 p5.Graphics.
+     * @param {Function(Event)}    [failureCallback] called with event error.
+     *
+     * @example
+     * &lt;div&gt;
+     * &lt;code&gt;
+     * pg = createGraphics(100, 100, SVG);
+     * background(200);
+     * pg.background(100);
+     * pg.ellipse(pg.width/2, pg.height/2, 50, 50);
+     * loadGraphics(pg, function(pgCanvas) {
+     *      image(pgCanvas, 50, 50);
+     *      image(pgCanvas, 0, 0, 50, 50);
+     * });
+     * &lt;/code&gt;
+     * &lt;/div&gt;
+     *
+     */
+    p5.prototype.loadGraphics = function(graphics, successCallback, failureCallback) {
+        if (graphics._graphics.svg) {
+            var svg = graphics._graphics.svg;
+            var url = SVGCanvas.prototype.toDataURL.call(graphics._graphics.elt, 'image/svg+xml');
+            var img = new Image();
+            var pg = this.createGraphics(graphics.width, graphics.height);
+            // also copy SVG, so we can keep vector SVG when image(pg) in SVG runtime
+            pg._graphics.svg = svg.cloneNode(true);
+            pg.loadImage(url, function(img) {
+                pg.image(img);
+                successCallback(pg);
+            });
+        } else {
+            successCallback(graphics);
+        }
+    };
+&nbsp;
+    /**
+     * Patched version of createCanvas
+     *
+     * use createCanvas(100, 100, SVG) to create SVG canvas.
+     *
+     * Creates a SVG element in the document, and sets its width and
+     * height in pixels. This method should be called only once at
+     * the start of setup.
+     * @param {Number} width - Width (in px) for SVG Element
+     * @param {Number} height - Height (in px) for SVG Element
+     * @return {Graphics}
+     */
+    var _createCanvas = p5.prototype.createCanvas;
+    p5.prototype.createCanvas = function(w, h, renderer) {
+        var graphics = _createCanvas.apply(this, arguments);
+        if (renderer === constants.SVG) {
+            var c = graphics.elt;
+            this._setProperty('_graphics', new p5.RendererSVG(c, this, true));
+            this._isdefaultGraphics = true;
+            this._graphics.resize(w, h);
+            this._graphics._applyDefaults();
+        }
+        return this._graphics;
+    };
+};
+&nbsp;</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Aug 19 2015 16:25:46 GMT+0800 (CST)</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>
